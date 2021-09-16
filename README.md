@@ -1,2 +1,2 @@
 # GEC
-Grammatical Error Correction application using Streamlit
+Grammatical Error Correction application using Streamlit 
