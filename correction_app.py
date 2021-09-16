@@ -149,27 +149,29 @@ st.set_page_config(page_title="GEC App", page_icon="🧠", layout="wide")
 st.title("Grammatical Error Correction")
 
 with st.form("my_form"):
-#    do_lang = st.radio('Language', ['Predict', 'en', 'fr', 'any'], index=0)
-    cols = st.columns(7)
-    cols[0].caption('Model:')
-    do_encdec_fr = cols[1].checkbox('EncDec_fr', value=True)
-    do_srilm_fr = cols[2].checkbox('SriLM_fr', value=False)
-    do_gector_fr = cols[3].checkbox('GECToR_fr', value=False)
-    do_encdec_en = cols[4].checkbox('EncDec_en', value=False)
-    do_srilm_en = cols[5].checkbox('SriLM_en', value=False)
-    do_gector_en = cols[6].checkbox('GECToR_en', value=False)
+    st.caption('Model')
+    do_langid = st.checkbox('LangID', value=True)
+    cols_fr = st.columns(3)
+    do_encdec_fr = cols_fr[0].checkbox('EncDec_fr', value=True)
+    do_srilm_fr = cols_fr[1].checkbox('SriLM_fr', value=False)
+    do_gector_fr = cols_fr[2].checkbox('GECToR_fr', value=False)
+    cols_en = st.columns(3)
+    do_encdec_en = cols_en[0].checkbox('EncDec_en', value=False)
+    do_srilm_en = cols_en[1].checkbox('SriLM_en', value=False)
+    do_gector_en = cols_en[2].checkbox('GECToR_en', value=False)
     lsrc = st.text_area(label="Source", value='', max_chars=1000).rstrip().split('\n')
     submit = st.form_submit_button("Correct")
 
     
 if submit:
-    tic = time.time()
-    if 'lid' not in st.session_state:        
-        st.session_state.lid = Lid()
-    language, prob = st.session_state.lid.predict(' '.join(lsrc))
-    toc = time.time()
-    st.write(now+'**Language**: [{:.4f} sec]'.format(toc-tic))
-    st.metric("({:.4f})".format(prob), language)
+    if do_langid:
+        tic = time.time()
+        if 'lid' not in st.session_state:        
+            st.session_state.lid = Lid()
+        language, prob = st.session_state.lid.predict(' '.join(lsrc))
+        toc = time.time()
+        st.write(now+'**LanguageID**: [{:.4f} sec]'.format(toc-tic))
+        st.metric("({:.4f})".format(prob), language)
 
     sys.stdout.write(now+'Input:\t{}\n'.format(lsrc))
 
