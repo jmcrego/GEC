@@ -8,5 +8,5 @@ Python libraries needed:
 * fasttext ($> pip install fasttext)
 
 To run:
- $> streamlit run correction_app.py 
+  $> streamlit run correction_app.py 
 
