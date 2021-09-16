@@ -150,7 +150,6 @@ st.title("Grammatical Error Correction")
 
 with st.form("my_form"):
 #    do_lang = st.radio('Language', ['Predict', 'en', 'fr', 'any'], index=0)
-    lsrc = st.text_area(label="Source", value='', max_chars=1000).rstrip().split('\n')
     cols = st.columns(7)
     cols[0].caption('Model:')
     do_encdec_fr = cols[1].checkbox('EncDec_fr', value=True)
@@ -159,6 +158,7 @@ with st.form("my_form"):
     do_encdec_en = cols[4].checkbox('EncDec_en', value=False)
     do_srilm_en = cols[5].checkbox('SriLM_en', value=False)
     do_gector_en = cols[6].checkbox('GECToR_en', value=False)
+    lsrc = st.text_area(label="Source", value='', max_chars=1000).rstrip().split('\n')
     submit = st.form_submit_button("Correct")
 
     
