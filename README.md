@@ -1,5 +1,5 @@
 # GEC
-Grammatical Error Correction application using [Streamlit](https://streamlit.io) <https://streamlit.io>
+Grammatical Error Correction application using <https://streamlit.io>
 
 Python libraries needed:
 * streamlit (`$> pip install streamlit`)
@@ -11,7 +11,7 @@ To run the app:
 
 `$> streamlit run correction_app.py `
 
-and open a web browser: http://localhost:8501/
+and open a web browser: <http://localhost:8501/>g
 
 
 ## Prepare an Enc-Dec model:
