@@ -30,11 +30,11 @@ Assuming BASE=/directory/where/your/correction_app.py/is/located
 `mkdir -p $BASE/EncDec_en`
 
 * The directory must contain:
-  * The ctranslate2 format of your Transformer enc-dec model, it contains:
+  * The Transformer enc-dec model (ctranslate2 format), it contains:
     * __model.bin__
     * __source_vocabulary.txt__
     * __target_vocabulary.txt__
-  * The tokenization config file that you used for training:
+  * The same tokenization config file that you used for training:
     * __tok_conf__
   * The BPE file used in tok_conf file (if any)
     * __bpe.incorr__ (use the name indicated in the tok_conf file)
