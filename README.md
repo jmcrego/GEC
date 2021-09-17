@@ -36,7 +36,6 @@ Assuming BASE=/directory/where/your/correction_app.py/is/located
     * __target_vocabulary.txt__
   * The tokenization config file that you used for training:
     * __tok_conf__
-
 ```
 mode: aggressive
 joiner_annotate: True
@@ -45,7 +44,6 @@ segment_numbers: True
 segment_alphabet_change: True
 bpe_model_path: EncDec_en/bpe.incorr
 ```
-
   * The BPE file used in tok_conf file (if any)
     * __bpe.incorr__ (use the name indicated in the tok_conf file)
 
