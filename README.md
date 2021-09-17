@@ -7,7 +7,10 @@ Python libraries needed:
 * ctranslate2 ($> pip install ctranslate2)
 * fasttext ($> pip install fasttext)
 
-To run the app: $> streamlit run correction_app.py 
+To run the app: 
+
+$> streamlit run correction_app.py 
+
 and open a web browser: http://localhost:8501/
 
 
