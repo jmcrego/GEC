@@ -2,10 +2,10 @@
 Grammatical Error Correction application using <https://streamlit.io>
 
 Python libraries needed:
-* streamlit `$> pip install streamlit`
-* pyonmttok `$> pip install pyonmttok`
-* ctranslate2 `$> pip install ctranslate2`
-* fasttext `$> pip install fasttext`
+* [streamlit]<https://streamlit.io> `$> pip install streamlit`
+* [pyonmttok](https://github.com/OpenNMT/Tokenizer) `$> pip install pyonmttok`
+* [ctranslate2]<https://github.com/OpenNMT/CTranslate2> `$> pip install ctranslate2`
+* [fasttext]<https://fasttext.cc> `$> pip install fasttext`
 
 To run the app: 
 
