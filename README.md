@@ -13,7 +13,7 @@ To run the app:
 
 and open a web browser: <http://localhost:8501/>
 
-## Follow the next steps to install models used by the app:
+## Install correction models
 
 Assuming BASE=/directory/where/your/correction_app.py/is/located
 
