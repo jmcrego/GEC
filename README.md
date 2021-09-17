@@ -31,11 +31,11 @@ Assuming BASE=/directory/where/your/correction_app.py/is/located
 
 * The directory must contain:
   * The ctranslate2 model 
-    * model.bin
-    * source_vocabulary.txt
-    * target_vocabulary.txt
-  * The config file for tokenization
-    * tok_conf
+    * __model.bin__
+    * __source_vocabulary.txt__
+    * __target_vocabulary.txt__
+  * The tokenization config file that you used for training:
+    * __tok_conf__
 
 ```
 mode: aggressive
@@ -47,7 +47,7 @@ bpe_model_path: EncDec_en/bpe.incorr
 ```
 
   * The BPE file used in tok_conf file (if any)
-    * bpe.incorr
+    * __bpe.incorr__ (use the name indicated in the tok_conf file)
 
 ### Prepare a SriLM model
 
