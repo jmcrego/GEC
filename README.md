@@ -37,14 +37,14 @@ Assuming BASE=/directory/where/your/correction_app.py/is/located
   * The config file for tokenization
     * tok_conf
 
-'''
+'
 mode: aggressive
 joiner_annotate: True
 preserve_segmented_tokens: True
 segment_numbers: True
 segment_alphabet_change: True
 bpe_model_path: EncDec_fr/bpe.incorr
-'''
+'
 
   * The BPE file used in tok_conf file (if any)
     * bpe.incorr
