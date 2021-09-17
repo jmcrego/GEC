@@ -25,8 +25,8 @@ Assuming BASE=/directory/where/your/correction_app.py/is/located
 
 ### Prepare an Enc-Dec model
 
-* Model directory myst be EncDec_\[language\] (i.e. EncDec_en))
-`mkdir -p $BASE/EncDec_en`
+* Model directory myst be EncDec_\[language\]
+  `mkdir -p $BASE/EncDec_en`
 
 * The directory must contain:
   * The ctranslate2 model 
