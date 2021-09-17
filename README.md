@@ -30,7 +30,7 @@ Assuming BASE=/directory/where/your/correction_app.py/is/located
 `mkdir -p $BASE/EncDec_en`
 
 * The directory must contain:
-  * The ctranslate2 model corresponding to your Transformer enc-dec model
+  * The ctranslate2 format of your Transformer enc-dec model, it contains:
     * __model.bin__
     * __source_vocabulary.txt__
     * __target_vocabulary.txt__
