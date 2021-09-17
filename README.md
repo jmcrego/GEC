@@ -43,7 +43,7 @@ joiner_annotate: True
 preserve_segmented_tokens: True
 segment_numbers: True
 segment_alphabet_change: True
-bpe_model_path: EncDec_fr/bpe.incorr
+bpe_model_path: EncDec_en/bpe.incorr
 ```
 
   * The BPE file used in tok_conf file (if any)
