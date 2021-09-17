@@ -48,7 +48,7 @@ segment_numbers: True
 segment_alphabet_change: True
 bpe_model_path: EncDec_en/bpe.incorr
 ```
-Convert OpenNMT or Fairseq models to ctranslate2 format using:
+Convert OpenNMT/Fairseq models to ctranslate2 format using:
 ```
 ct2-opennmt-py-converter
 ct2-opennmt-tf-converter
