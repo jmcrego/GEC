@@ -13,11 +13,20 @@ To run the app:
 
 and open a web browser: <http://localhost:8501/>
 
+## Follow the next steps to install models used by the app:
 
-## Prepare an Enc-Dec model:
+Assuming BASE=/directory/where/your/correction_app.py/is/located
+
+### Prepare the LID model:
+
+Download the LID model
+
+`(mkdir $BASE/LID && cd $BASE/LID && wget https://dl.fbaipublicfiles.com/fasttext/supervised-models/lid.176.ftz)`
+
+### Prepare an Enc-Dec model:
 
 
-## Prepare a SriLM model:
+### Prepare a SriLM model:
 
 
-## Prepare a GECToR model:
+### Prepare a GECToR model:
