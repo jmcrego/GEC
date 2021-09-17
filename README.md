@@ -39,7 +39,7 @@ Assuming BASE=/directory/where/your/correction_app.py/is/located
   * The BPE file used in tok_conf file (if any)
     * __bpe.incorr__ (use the name indicated in the tok_conf file)
 
-   Example of tok_conf file:
+Example of tok_conf file:
 ```
 mode: aggressive
 joiner_annotate: True
@@ -47,6 +47,12 @@ preserve_segmented_tokens: True
 segment_numbers: True
 segment_alphabet_change: True
 bpe_model_path: EncDec_en/bpe.incorr
+```
+Convert OpenNMT or Fairseq models to ctranslate2 format using:
+```
+ct2-opennmt-py-converter
+ct2-opennmt-tf-converter
+ct2-fairseq-converter
 ```
 
 ### Prepare a SriLM model
