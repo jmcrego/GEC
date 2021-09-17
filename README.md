@@ -17,16 +17,23 @@ and open a web browser: <http://localhost:8501/>
 
 Assuming BASE=/directory/where/your/correction_app.py/is/located
 
-### Prepare the LID model:
+### Prepare the LID model
 
-Download the LID model
+* Download the LID model
 
-`(mkdir $BASE/LID && cd $BASE/LID && wget https://dl.fbaipublicfiles.com/fasttext/supervised-models/lid.176.ftz)`
+`(mkdir -p $BASE/LID && cd $BASE/LID && wget https://dl.fbaipublicfiles.com/fasttext/supervised-models/lid.176.ftz)`
 
-### Prepare an Enc-Dec model:
+### Prepare an Enc-Dec model
+
+* Model directory myst be EncDec_\[language\] (i.e. EncDec_en))
+`mkdir -p $BASE/EncDec_en`
+
+* The directory must contain:
+** The ctranslate2 model ($BASE/EncDec_en/{model.bin;source_vocabulary.txt;target_vocabulary.txt})
+** The config file for tokenization ($BASE/tok_conf)
+** The BPE file used the tok_conf file
+
+### Prepare a SriLM model
 
 
-### Prepare a SriLM model:
-
-
-### Prepare a GECToR model:
+### Prepare a GECToR model
