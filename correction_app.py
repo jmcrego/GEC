@@ -1,8 +1,9 @@
 import sys
 import time
 import os
-from datetime import datetime
-from difflib import SequenceMatcher
+import datetime
+import difflib
+
 import yaml
 import six
 import ctranslate2
@@ -10,7 +11,7 @@ import pyonmttok
 import fasttext
 import streamlit as st
 
-now = datetime.now().strftime("[%d/%m/%Y-%H:%M:%S] ")
+now = datetime.datetime.now().strftime("[%d/%m/%Y-%H:%M:%S] ")
 newline = '  \n' # first two spaces are needed
 fasttext.FastText.eprint = lambda x: None #disable fasttext warnings
 showWarningOnDirectExecution = False #disable streamlit warnings
@@ -26,7 +27,7 @@ def mark_diffs(lsrc, lhyp):
     for l in range(len(lsrc)):
         src = lsrc[l].split()
         hyp = lhyp[l].split()
-        for tag, i, j, u, v in SequenceMatcher(None, src, hyp).get_opcodes():
+        for tag, i, j, u, v in difflib.SequenceMatcher(None, src, hyp).get_opcodes():
             if tag in ('delete', 'insert', 'replace'):
                 for k in range(u,v):
                     hyp[k] = '**' + hyp[k] + '**' ### word lhyp[l][k] is marked with bold face
