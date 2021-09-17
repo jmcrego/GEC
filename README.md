@@ -34,8 +34,20 @@ Assuming BASE=/directory/where/your/correction_app.py/is/located
     * model.bin
     * source_vocabulary.txt
     * target_vocabulary.txt
-  * The config file for tokenization ($BASE/tok_conf)
-  * The BPE file used the tok_conf file
+  * The config file for tokenization
+    * tok_conf
+
+'''
+mode: aggressive
+joiner_annotate: True
+preserve_segmented_tokens: True
+segment_numbers: True
+segment_alphabet_change: True
+bpe_model_path: EncDec_fr/bpe.incorr
+'''
+
+  * The BPE file used in tok_conf file (if any)
+    * bpe.incorr
 
 ### Prepare a SriLM model
 
