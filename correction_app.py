@@ -1,13 +1,13 @@
 import sys
+import time
+import os
+from datetime import datetime
+from difflib import SequenceMatcher
 import yaml
 import six
-import time
-import os.path
 import ctranslate2
 import pyonmttok
 import fasttext
-from datetime import datetime
-from difflib import SequenceMatcher
 import streamlit as st
 
 now = datetime.now().strftime("[%d/%m/%Y-%H:%M:%S] ")
