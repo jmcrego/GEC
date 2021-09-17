@@ -29,9 +29,12 @@ Assuming BASE=/directory/where/your/correction_app.py/is/located
 `mkdir -p $BASE/EncDec_en`
 
 * The directory must contain:
-  * The ctranslate2 model ($BASE/EncDec_en/{model.bin;source_vocabulary.txt;target_vocabulary.txt})
-  * The config file for tokenization ($BASE/tok_conf)
-  * The BPE file used the tok_conf file
+ * The ctranslate2 model 
+  * model.bin
+  * source_vocabulary.txt
+  * target_vocabulary.txt
+ * The config file for tokenization ($BASE/tok_conf)
+ * The BPE file used the tok_conf file
 
 ### Prepare a SriLM model
 
