@@ -1,5 +1,5 @@
 # GEC
-Grammatical Error Correction application using Streamlit 
+Grammatical Error Correction application using [Streamlit](https://streamlit.io)
 
 Python libraries needed:
 * streamlit (`$> pip install streamlit`)
